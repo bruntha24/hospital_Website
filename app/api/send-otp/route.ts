@@ -1,5 +1,5 @@
 // app/api/send-otp/route.ts
-export const runtime = "node"; // ⚠️ Nodemailer requires Node.js runtime
+export const runtime = "nodejs"; // ⚠️ Nodemailer requires Node.js runtime
 
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
@@ -93,3 +93,4 @@ export async function PUT(req: NextRequest) {
     return NextResponse.json({ success: false, error: "Server error" }, { status: 500 });
   }
 }
+
